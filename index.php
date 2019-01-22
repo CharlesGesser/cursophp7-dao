@@ -10,7 +10,7 @@
 	echo $root;
 */
 
-	/*
+/*
 	//carrega uma lista de usuarios
 	$lista = Usuario::getList();
 
@@ -18,21 +18,50 @@
 
 */
 
+/*
 	//Carrega uma lista de usuarios buscando pelo login
 	$search = Usuario::search("o");
 
 	echo json_encode($search);
+*/
 
-	/*
+/*
 	//Carrega um usuario usando o login e a senha
 
 	$usuario = new Usuario();
 
 	$usuario->login("root", "!@#$");
 
-
 	echo ($usuario);
 */
 
+/*
+	//Criar um aluno com metodo construtor vasio
+	$aluno = new Usuario();
+
+	$aluno->setDeslogin("aluno");
+	$aluno->setDessenha("@lun0");
+
+	$aluno->insert();
+
+	echo $aluno;
+
+*/
+/*
+	//cria um aluno passando os dados no construtor
+	$aluno = new Usuario("Aluno exemplo", "senha exemplo");
+
+	$aluno->insert();
+
+	echo $aluno;
+*/
+	//Fazer update no usuario
+	$usuario = new Usuario();
+
+	$usuario->loadById(4);
+
+	$usuario->update("Professor", "Senha do id 5");
+
+	echo $usuario;
 
  ?>
