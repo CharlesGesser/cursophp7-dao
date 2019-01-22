@@ -55,6 +55,7 @@
 
 	echo $aluno;
 */
+/*
 	//Fazer update no usuario
 	$usuario = new Usuario();
 
@@ -63,5 +64,14 @@
 	$usuario->update("Professor", "Senha do id 5");
 
 	echo $usuario;
+*/
 
+	//Deletar um usuario
+	$usuario = new Usuario();
+
+	$usuario->loadById(4);
+
+	$usuario->delete();
+
+	echo $usuario;
  ?>
